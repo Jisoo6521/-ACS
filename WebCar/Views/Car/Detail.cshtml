@@ -1,0 +1,96 @@
+﻿@model WebCar.Models.Car
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>Detail</h2>*@
+<link rel="stylesheet" type="text/css" href="~/Content/css/style.css" />
+
+<div class="row" style="background-color:black">
+    <div class="column">
+        <img src=/@Model.Hinh style="width:300px" height="250px" />
+    </div>
+</div>
+
+<div class="down" style="text-align:center">
+    <h1 style="text-align:center">@Model.TenXe</h1>
+    <hr />
+    <dl class="dl-horizontal" style="font-size:20px; background-color: black; color:white">
+        <dt>
+            <p> Mã Xe:     </p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaXe)
+        </dd>
+
+        <dt>
+            <p> Tên Xe:     </p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenXe)
+        </dd>
+
+        <dt>
+            <p> Giá:    </p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GiaBan)
+        </dd>
+
+        <dt>
+            <p> Số Lượng:   </p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            <p>Động Cơ:     </p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DongCo)
+        </dd>
+
+        <dt>
+            <p>Hộp Số:     </p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HopSo)
+        </dd>
+
+        <dt>
+            <p> Công Suất:      </p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CongSuat)
+        </dd>
+
+        <dt>
+            <p> Chiều Dài:   </p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ChieuDai)
+        </dd>
+
+        <dt>
+            <p> Chiều Rộng:   </p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ChieuRong)
+        </dd>
+
+        <dt>
+            <p> Hãng:   </p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TheLoai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaXe }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
